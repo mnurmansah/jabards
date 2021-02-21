@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Form, Jumbotron } from 'react-bootstrap';
+import { Col, Row, Form } from 'react-bootstrap';
 import NavigationBar from '../../components/navigation_bar/NavigationBar';
 import './Home.scss';
 
@@ -36,13 +36,10 @@ class Home extends React.Component {
     onSubmitForm() {
       console.log(this.state);
       const formData = new FormData();
-      formData.append('myImage',this.state.file);
-      const config = {
-        headers: {
-            'content-type': 'multipart/form-data'
-        }
+      formData.append('fotoktp',this.state.file);
+      formData.append('fotokk',this.state.file);
     };
-    }
+    
 
 render() {
   return (
